@@ -1,0 +1,40 @@
+<div class="max-w-full mx-auto bg-white shadow rounded-lg p-6">
+  <!-- Cabeçalho -->
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Agendar Visita</h2>
+  <p class="text-gray-600 mb-6">
+    Você está agendando uma visita para o imóvel <span class="font-semibold">Casa de Praia</span>.
+  </p>
+
+  <!-- Formulário -->
+  <form class="space-y-4">
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Data da visita</label>
+      <input type="date"
+             class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Hora da visita</label>
+      <input type="time"
+             class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Observações</label>
+      <textarea placeholder="Ex: Prefiro horário da tarde..."
+                class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+    </div>
+
+    <!-- Botões -->
+    <div class="flex justify-end space-x-4">
+      <a routerLink="/imoveis/consulta"
+         class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+        Cancelar
+      </a>
+      <button type="submit"
+              class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+        Confirmar Agendamento
+      </button>
+    </div>
+  </form>
+</div>

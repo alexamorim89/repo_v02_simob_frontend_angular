@@ -1,0 +1,63 @@
+<div class="mx-auto bg-white shadow rounded-lg p-6">
+  <!-- Perfil do usuário -->
+  <div class="flex items-center space-x-4 mb-6">
+    <img src="assets/imagens/owner.jpg" alt="Foto do usuário"
+         class="w-20 h-20 rounded-full border"/>
+    <div>
+      <h3 class="text-xl font-bold text-gray-800">José Silva</h3>
+      <p class="text-sm text-gray-600">Perfil: Novolita</p>
+      <p class="text-sm text-gray-600">E-mail: jose.silva@empresa.com</p>
+      <p class="text-sm text-gray-600">Login: usuario12345</p>
+      <p class="text-sm">
+        Status atual: <span class="px-2 py-1 rounded-full text-xs bg-green-100 text-green-700">Ativo</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Formulário de ativação -->
+  <form class="space-y-4">
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Nome</label>
+      <input type="text" value="José Silva"
+             class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Perfil</label>
+      <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+        <option>Administrador</option>
+        <option selected>Novolita</option>
+        <option>Financeiro</option>
+      </select>
+    </div>
+
+    <!-- Novo campo de Status -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Status</label>
+      <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+        <option value="ativo" selected>Ativo</option>
+        <option value="inativo">Inativo</option>
+        <option value="pendente">Pendente</option>
+        <option value="bloqueado">Bloqueado</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Observações</label>
+      <textarea class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Notas sobre ativação..."></textarea>
+    </div>
+
+    <!-- Botões -->
+    <div class="flex justify-end space-x-4">
+      <button type="button"
+              class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+        Cancelar
+      </button>
+      <button type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>

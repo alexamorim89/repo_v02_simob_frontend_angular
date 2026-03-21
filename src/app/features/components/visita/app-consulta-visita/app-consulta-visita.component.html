@@ -1,0 +1,63 @@
+<div class="min-h-screen bg-gray-50 p-6">
+
+  <!-- Cabeçalho -->
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Consulta de Visita</h2>
+    <div class="space-x-2">
+      <!-- Botão de navegação -->
+      <a routerLink="/visitas/nova"
+         class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+        + Nova Visita
+      </a>
+      <!-- Botão de consulta -->
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Consultar
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Filtros -->
+  <div class="bg-white shadow rounded-lg p-4 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <input type="text" placeholder="Buscar por referência"
+           class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500"/>
+
+    <input type="date"
+           class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500"/>
+
+    <select class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+      <option>Selecione local...</option>
+      <option>Edifício A</option>
+      <option>Edifício B</option>
+    </select>
+  </div>
+
+  <!-- Tabela -->
+  <div class="bg-white shadow rounded-lg overflow-hidden">
+    <table class="min-w-full text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Foto</th>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Direção</th>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Data/Hora</th>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Estado</th>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Participantes</th>
+          <th class="px-4 py-2 text-left font-medium text-gray-700">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t">
+          <td class="px-4 py-2">
+            <img src="assets/imagens/imovel-casa.png" width="200" alt="Imóvel" class="rounded-md"/>
+          </td>
+          <td class="px-4 py-2">Edifício Teste CNE 2023AA</td>
+          <td class="px-4 py-2">14/03/2023 - 17:00</td>
+          <td class="px-4 py-2">
+            <span class="px-2 py-1 rounded-full text-xs bg-yellow-100 text-yellow-700">Em espera</span>
+          </td>
+          <td class="px-4 py-2">John</td>
+          <td class="px-4 py-2">
+            <button class="text-blue-600 hover:underline">Ver mais</button>
+          </td>
+        </tr>
+        <tr class="border-t">

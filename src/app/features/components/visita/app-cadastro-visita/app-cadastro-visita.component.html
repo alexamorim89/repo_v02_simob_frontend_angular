@@ -1,0 +1,64 @@
+<div class="min-h-screen bg-gray-50 p-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Coluna esquerda: gráfico -->
+    <div class="bg-white shadow rounded-lg p-6">
+      <h3 class="text-lg font-bold text-gray-800 mb-4">Relatório de Visitas</h3>
+      
+      <!-- Gráfico -->
+      <canvas id="visitasChart" class="w-full h-64"></canvas>
+      
+      <!-- Opções -->
+      <div class="mt-4 space-y-2">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+          <span class="text-sm text-gray-700">Start flow</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+          <span class="text-sm text-gray-700">Start and end timed boxes</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Coluna direita: formulário -->
+    <div class="bg-white shadow rounded-lg p-6">
+      <h3 class="text-lg font-bold text-gray-800 mb-4">Cadastro de Visita</h3>
+      
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Nome do Visitante</label>
+          <input type="text" placeholder="Digite o nome"
+                 class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Local da Visita</label>
+          <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+            <option>Selecione...</option>
+            <option>Recepção</option>
+            <option>Centro de Eventos</option>
+            <option>Área Restrita</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Data</label>
+          <input type="date"
+                 class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Horário</label>
+          <input type="time"
+                 class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+          Salvar Visita
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
