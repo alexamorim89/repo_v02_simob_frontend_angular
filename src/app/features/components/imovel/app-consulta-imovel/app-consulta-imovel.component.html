@@ -1,0 +1,274 @@
+<div class="p-6 space-y-6">
+  <!-- Título -->
+   <div class="flex justify-between items-center">
+        <h2 class="text-2xl font-bold text-gray-800">Consulta Imóvel</h2>
+        <!-- Botão Novo Imóvel -->
+        <a routerLink="/imoveis/novo"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" style="cursor: pointer;">
+            + Novo Imóvel
+        </a>
+   </div>
+
+  <!-- Filtros -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <select class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+            <option>Município</option>
+            <option>Rio de Janeiro</option>
+            <option>São Paulo</option>
+        </select>
+
+         <select class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+            <option>Tipo de Imóvel</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Terreno</option>
+        </select>
+
+        
+        <select class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+            <option>Segmento</option>
+            <option>Residencial</option>
+            <option>Comercial</option>
+        </select>
+
+        <select class="border rounded-md px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+            <option>Ordenação</option>
+            <option>Mais recentes</option>
+            <option>Menor valor</option>
+            <option>Maior valor</option>
+        </select>
+  </div>  
+
+  <!-- Lista de imóveis -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Card de imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <!-- Botão de navegação -->
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-apartamento.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Apartamento Moderno</h3>
+          <p class="text-gray-600 text-sm">Apartamento com 2 quartos, varanda e vista para o mar.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 2 Quartos</span>
+            <span>🛁 1 Banheiro</span>
+            <span>🚗 2 Garagens</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 650.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+     <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+     <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+
+     <!-- Outro imóvel -->
+    <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col">
+      <img src="assets/imagens/imovel-casa.png" alt="Imóvel" class="w-full h-48 object-cover"/>
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Casa de Praia</h3>
+          <p class="text-gray-600 text-sm">Linda casa com 3 quartos, 2 banheiros e piscina.</p>
+          <div class="flex space-x-4 text-gray-500 text-sm">
+            <span>🛏️ 3 Quartos</span>
+            <span>🛁 2 Banheiros</span>
+            <span>🚗 1 Garagem</span>
+          </div>
+          <div class="text-green-600 font-bold">R$ 850.000</div>
+        </div>
+        <!-- Botões de ação -->
+        <div class="mt-4 flex space-x-3">
+          <a routerLink="/imoveis/detalhes/1"
+            class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            Ver detalhes
+          </a>
+          <!-- <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+            Salvar anúncio
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Paginação -->
+  <div class="flex justify-center mt-6">
+    <nav class="inline-flex space-x-2">
+      <button class="px-3 py-1 border rounded-md text-sm text-gray-600 hover:bg-gray-100">Anterior</button>
+      <button class="px-3 py-1 border rounded-md text-sm bg-blue-600 text-white">1</button>
+      <button class="px-3 py-1 border rounded-md text-sm text-gray-600 hover:bg-gray-100">2</button>
+      <button class="px-3 py-1 border rounded-md text-sm text-gray-600 hover:bg-gray-100">3</button>
+      <button class="px-3 py-1 border rounded-md text-sm text-gray-600 hover:bg-gray-100">Próximo</button>
+    </nav>
+  </div>
+</div>
