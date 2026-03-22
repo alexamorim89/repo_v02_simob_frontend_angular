@@ -10,16 +10,42 @@
   </div>
 
   <!-- Tipo -->
-  <div>
-    <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
-    <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
-      <option value="">Selecione...</option>
-      <option value="casa">Casa</option>
-      <option value="apartamento">Apartamento</option>
-      <option value="terreno">Terreno</option>
-      <option value="comercial">Comercial</option>
-    </select>
-  </div>
+   <div class="grid grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="casa">Casa</option>
+          <option value="ap_padrao">Apartamento Padrão</option>
+          <option value="ap_garden">Apartamento Garden</option>
+          <option value="ap_mansao">Apartamento Mansão</option>
+          <option value="ap_duplex">Apartamento Duplex</option>
+          <option value="terreno">Terreno</option>
+          <option value="comercial">Comercial</option>
+          <option value="loja">Loja</option>
+          <option value="kitnet">Kitnet</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Tipo de Venda</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="venda">Venda</option>
+          <option value="aluguel">Aluguel</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Situação do Imóvel</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="novo">Novo</option>
+          <option value="semi_novo">Semi Novo</option>
+          <option value="antigo">Antigo</option>
+          <option value="em_construcao">Em Construção</option>
+        </select>
+      </div>
+   </div>
+
 
   <!-- Preço -->
   <div>

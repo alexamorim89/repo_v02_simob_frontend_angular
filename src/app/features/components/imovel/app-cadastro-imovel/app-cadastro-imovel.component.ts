@@ -42,8 +42,7 @@ export class AppCadastroImovelComponent {
     if (this.isPessoaFisica()) {
       return 'mt-8 border rounded-lg p-6 bg-green-50 border-green-300';
     } else if (this.isPessoaJuridica()) {
-      return 'mt-8 border rounded-lg p-6 bg-gray-70 border-blue-300';
-    }
+      return 'mt-8 border border-gray-300 rounded-lg p-6 bg-blue-50 mb-6';    }
     return 'mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50';
   }
 
