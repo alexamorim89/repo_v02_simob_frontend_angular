@@ -22,6 +22,11 @@ export const routes: Routes = [
           import('./features/components/imovel/app-detalhe-imovel/app-detalhe-imovel.component').then(m => m.AppDetalheImovelComponent)
       },
       {
+        path: 'imoveis/editar/:id',
+        loadComponent: () =>
+          import('./features/components/imovel/app-editar-imovel/app-editar-imovel.component').then(m => m.AppEditarImovelComponent)
+      },
+      {
         path: 'imoveis/novo',
         loadComponent: () =>
           import('./features/components/imovel/app-cadastro-imovel/app-cadastro-imovel.component').then(m => m.AppCadastroImovelComponent)

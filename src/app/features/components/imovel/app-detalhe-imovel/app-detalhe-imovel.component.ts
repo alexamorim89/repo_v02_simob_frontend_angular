@@ -9,6 +9,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class AppDetalheImovelComponent {
   imovelId: string | null = null;
+  showDeleteModal = false;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -16,4 +17,22 @@ export class AppDetalheImovelComponent {
     this.imovelId = this.route.snapshot.paramMap.get('id');
     // Aqui você pode chamar um serviço para buscar os detalhes do imóvel pelo ID
   }
+
+
+  abrirModalExclusao() {
+    this.showDeleteModal = true;
+  }
+
+  fecharModal() {
+    this.showDeleteModal = false;
+  }
+
+  confirmarExclusao() {
+    // aqui você coloca a lógica de exclusão (ex: chamar serviço)
+    console.log('Imóvel excluído!');
+    this.showDeleteModal = false;
+  }
+
+
+
 }

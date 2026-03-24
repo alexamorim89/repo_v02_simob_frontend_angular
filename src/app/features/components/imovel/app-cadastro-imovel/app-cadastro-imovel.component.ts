@@ -9,17 +9,19 @@ import { Component } from '@angular/core';
 })
 export class AppCadastroImovelComponent {
 
-  preview: string | ArrayBuffer | null = null;
+  previews: string[] = [];
 
-  onFileSelected(event: Event) {
-    const file = (event.target as HTMLInputElement).files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.preview = reader.result;
-        // this.imovel.imagem = file.name;
-      };
-      reader.readAsDataURL(file);
+  onFilesSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      this.previews = [];
+      Array.from(input.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          this.previews.push(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      });
     }
   }
 
@@ -46,7 +48,9 @@ export class AppCadastroImovelComponent {
     return 'mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50';
   }
 
-
+  removerImagem(index: number) {
+  this.previews.splice(index, 1);
+}
 
 
 
