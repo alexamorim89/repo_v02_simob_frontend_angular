@@ -11,12 +11,12 @@
     <div>
       <label class="block text-sm font-semibold text-gray-700">Título do Imóvel</label>
       <input type="text"
-             class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+             class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
     </div>
     <div>
       <label class="block text-sm font-semibold text-gray-700">Preço</label>
       <input type="number"
-             class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+             class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <div>
       <label class="block text-sm font-semibold text-gray-700">Tipo de Imóvel</label>
-      <select class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
+      <select class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
         <option>Selecione...</option>
         <option value="casa">Casa</option>
         <option value="ap_padrao">Apartamento Padrão</option>
@@ -39,7 +39,7 @@
     </div>
     <div>
       <label class="block text-sm font-semibold text-gray-700">Tipo de Venda</label>
-      <select class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
+      <select class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
         <option>Selecione...</option>
         <option value="venda">Venda</option>
         <option value="aluguel">Aluguel</option>
@@ -47,7 +47,7 @@
     </div>
     <div>
       <label class="block text-sm font-semibold text-gray-700">Situação do Imóvel</label>
-      <select class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
+      <select class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500">
         <option>Selecione...</option>
         <option value="novo">Novo</option>
         <option value="semi_novo">Semi Novo</option>
@@ -65,27 +65,27 @@
     <div class="bg-yellow-100 p-4 rounded-lg text-center">
       <i class="fas fa-bed text-yellow-600 text-xl"></i>
       <p class="mt-2 font-medium">Quartos</p>
-      <input type="number" formControlName="quartos" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="quartos" class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-blue-100 p-4 rounded-lg text-center">
       <i class="fas fa-shower text-blue-600 text-xl"></i>
       <p class="mt-2 font-medium">Banheiros</p>
-      <input type="number" formControlName="banheiros" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="banheiros" class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-red-100 p-4 rounded-lg text-center">
       <i class="fas fa-car text-red-600 text-xl"></i>
       <p class="mt-2 font-medium">Garagem</p>
-      <input type="number" formControlName="garagem" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="garagem" class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-green-100 p-4 rounded-lg text-center">
       <i class="fas fa-ruler-combined text-green-600 text-xl"></i>
       <p class="mt-2 font-medium">Área (m²)</p>
-      <input type="number" formControlName="area" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="area" class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
-    <div class="bg-brand-500 p-4 rounded-lg text-center">
-        <i class="fa-solid fa-person-booth text-amber-950 text-xl"></i>
+    <div class="bg-amber-100 p-4 rounded-lg text-center">
+        <i class="fa-solid fa-person-booth text-amber-700 text-xl"></i>
         <p class="mt-2 font-medium">Suite</p>
-        <input type="number" formControlName="suite" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+        <input type="number" formControlName="suite" class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
   </section>
 
@@ -117,7 +117,7 @@
     <!-- Cobertura -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCobertura"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-building text-blue-600"></i>
       <span class="text-gray-700">Cobertura</span>
     </label>
@@ -125,7 +125,7 @@
     <!-- Condomínio Fechado -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCondominioFechado"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-lock text-blue-600"></i>
       <span class="text-gray-700">Condomínio Fechado</span>
     </label>
@@ -207,7 +207,7 @@
   <!-- Descrição -->
   <div>
     <label class="block text-sm font-semibold text-gray-700">Descrição</label>
-    <textarea rows="4" class="mt-2 block w-full border rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+    <textarea rows="4" class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
   </div>
 
   <!-- Endereço -->
@@ -216,31 +216,31 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="col-span-2">
         <label class="block text-gray-700 font-medium mb-2">CEP</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="cep">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="cep">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Logradouro</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="logradouro">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="logradouro">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Número</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="numero">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="numero">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Complemento</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="complemento">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="complemento">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Bairro</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="bairro">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="bairro">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Cidade</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="cidade">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="cidade">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Estado</label>
-        <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="estado">
+        <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2" formControlName="estado">
       </div>
     </div>
   </div>
@@ -251,7 +251,7 @@
       <!-- Tipo -->
       <div class="mb-4">
         <label class="block text-gray-700 font-medium mb-2">Tipo de Proprietário</label>
-        <select class="w-full border rounded-lg px-3 py-2" (change)="selecionarTipo($event)">
+        <select class="w-full border border-gray-400 rounded-lg px-3 py-2" (change)="selecionarTipo($event)">
           <option>Selecione...</option>
           <option value="pessoa_fisica" [defaultSelected]="true">Pessoa Física</option>
           <option value="pessoa_juridica">Pessoa Jurídica</option>
@@ -263,23 +263,23 @@
       <div id="campos-fisica" class="grid grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 font-medium mb-2">Nome</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Email</label>
-          <input type="email" class="w-full border rounded-lg px-3 py-2">
+          <input type="email" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">RG</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">CPF</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div class="col-span-2">
           <label class="block text-gray-700 font-medium mb-2">Data de Nascimento</label>
-          <input type="date" class="w-full border rounded-lg px-3 py-2">
+          <input type="date" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
       </div>
     }
@@ -289,19 +289,19 @@
       <div id="campos-juridica" class="grid grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 font-medium mb-2">Razão Social</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Email</label>
-          <input type="email" class="w-full border rounded-lg px-3 py-2">
+          <input type="email" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">CNPJ</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
         <div>
           <label class="block text-gray-700 font-medium mb-2">Inscrição Estadual</label>
-          <input type="text" class="w-full border rounded-lg px-3 py-2">
+          <input type="text" class="w-full border border-gray-400 rounded-lg px-3 py-2">
         </div>
       </div>
    }

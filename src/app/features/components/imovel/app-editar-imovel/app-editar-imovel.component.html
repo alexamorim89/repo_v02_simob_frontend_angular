@@ -1,179 +1,184 @@
 <div class="max-w-7xl mx-auto bg-white shadow-lg rounded-lg p-8 space-y-10">
-  <h2 class="text-3xl font-bold text-gray-900 border-b pb-4">Editar Imóvel</h2>
+  <h2 class="text-3xl font-bold text-blue-700 border-b pb-4">Editar Imóvel</h2>
 
-  <!-- Informações principais -->
-  <section class="bg-blue-50 p-6 rounded-lg space-y-4">
-    <h3 class="text-lg font-semibold text-blue-800 flex items-center gap-2">
-      <i class="fas fa-home"></i> Informações Principais
-    </h3>
+<!-- Informações principais -->
+<section class="bg-blue-50 p-6 rounded-lg space-y-4">
+  <h3 class="text-lg font-semibold text-blue-800 flex items-center gap-2">
+    <i class="fas fa-home"></i> Informações Principais
+  </h3>
+
+  <!-- Título e Preço -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div>
-      <label class="block text-sm font-medium text-gray-700">Título do Imóvel</label>
-      <input type="text" formControlName="titulo"
-             class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
-    </div>
-    <div class="grid grid-cols-3 gap-6">
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
-        <select formControlName="tipo" class="mt-1 block w-full border rounded-md px-3 py-2">
-          <option value="">Selecione...</option>
-          <option value="casa">Casa</option>
-          <option value="ap_padrao">Apartamento Padrão</option>
-          <option value="ap_garden">Apartamento Garden</option>
-          <option value="ap_mansao">Apartamento Mansão</option>
-          <option value="ap_duplex">Apartamento Duplex</option>
-          <option value="terreno">Terreno</option>
-          <option value="comercial">Comercial</option>
-          <option value="loja">Loja</option>
-          <option value="kitnet">Kitnet</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Tipo de Venda</label>
-        <select formControlName="tipoVenda" class="mt-1 block w-full border rounded-md px-3 py-2">
-          <option value="">Selecione...</option>
-          <option value="venda">Venda</option>
-          <option value="aluguel">Aluguel</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Situação</label>
-        <select formControlName="situacao" class="mt-1 block w-full border rounded-md px-3 py-2">
-          <option value="">Selecione...</option>
-          <option value="novo">Novo</option>
-          <option value="semi_novo">Semi Novo</option>
-          <option value="antigo">Antigo</option>
-          <option value="em_construcao">Em Construção</option>
-        </select>
-      </div>
+      <label class="block text-sm font-semibold text-gray-700">Título do Imóvel</label>
+      <input type="text"
+             class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
     </div>
     <div>
-      <label class="block text-sm font-medium text-gray-700">Preço</label>
-      <input type="number" formControlName="preco"
-             class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+      <label class="block text-sm font-semibold text-gray-700">Preço</label>
+      <input type="number"
+             class="mt-2 block w-full border border-gray-400 rounded-lg px-4 py-2 focus:ring-blue-500 focus:border-blue-500"/>
     </div>
-  </section>
+  </div>
 
-  <!-- Características -->
-  <section class="grid grid-cols-4 gap-4">
+  <!-- Seleções principais -->
+  <div class="grid grid-cols-3 gap-6">
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
+      <select formControlName="tipo" class="mt-1 block w-full border border-gray-400 rounded-md px-3 py-2">
+        <option value="">Selecione...</option>
+        <option value="casa">Casa</option>
+        <option value="ap_padrao">Apartamento Padrão</option>
+        <option value="ap_garden">Apartamento Garden</option>
+        <option value="ap_mansao">Apartamento Mansão</option>
+        <option value="ap_duplex">Apartamento Duplex</option>
+        <option value="terreno">Terreno</option>
+        <option value="comercial">Comercial</option>
+        <option value="loja">Loja</option>
+        <option value="kitnet">Kitnet</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Tipo de Venda</label>
+      <select formControlName="tipoVenda" class="mt-1 block w-full border border-gray-400 rounded-md px-3 py-2">
+        <option value="">Selecione...</option>
+        <option value="venda">Venda</option>
+        <option value="aluguel">Aluguel</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Situação</label>
+      <select formControlName="situacao" class="mt-1 block w-full border border-gray-400 rounded-md px-3 py-2">
+        <option value="">Selecione...</option>
+        <option value="novo">Novo</option>
+        <option value="semi_novo">Semi Novo</option>
+        <option value="antigo">Antigo</option>
+        <option value="em_construcao">Em Construção</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<!-- Layout em duas colunas: inputs coloridos + checkboxes -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+  
+  <!-- Inputs coloridos -->
+  <section class="grid grid-cols-2 md:grid-cols-3 gap-6">
     <div class="bg-yellow-100 p-4 rounded-lg text-center">
       <i class="fas fa-bed text-yellow-600 text-xl"></i>
       <p class="mt-2 font-medium">Quartos</p>
-      <input type="number" formControlName="quartos" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="quartos"
+             class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-blue-100 p-4 rounded-lg text-center">
       <i class="fas fa-shower text-blue-600 text-xl"></i>
       <p class="mt-2 font-medium">Banheiros</p>
-      <input type="number" formControlName="banheiros" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="banheiros"
+             class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-red-100 p-4 rounded-lg text-center">
       <i class="fas fa-car text-red-600 text-xl"></i>
       <p class="mt-2 font-medium">Garagem</p>
-      <input type="number" formControlName="garagem" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="garagem"
+             class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
     <div class="bg-green-100 p-4 rounded-lg text-center">
       <i class="fas fa-ruler-combined text-green-600 text-xl"></i>
       <p class="mt-2 font-medium">Área (m²)</p>
-      <input type="number" formControlName="area" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+      <input type="number" formControlName="area"
+             class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
-      <div class="bg-brand-500 p-4 rounded-lg text-center">
-        <i class="fa-solid fa-person-booth text-amber-950 text-xl"></i>
-        <p class="mt-2 font-medium">Suite</p>
-        <input type="number" formControlName="suite" class="mt-1 w-full text-center border rounded-md px-2 py-1"/>
+    <div class="bg-amber-100 p-4 rounded-lg text-center">
+      <i class="fa-solid fa-person-booth text-amber-700 text-xl"></i>
+      <p class="mt-2 font-medium">Suíte</p>
+      <input type="number" formControlName="suite"
+             class="mt-1 w-full text-center border border-gray-400 rounded-md px-2 py-1"/>
     </div>
   </section>
 
-  <!-- Características -->
-   <div class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <!-- Área de Serviço -->
+  <!-- Checkboxes -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temAreaServico"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-broom text-blue-600"></i>
       <span class="text-gray-700">Área de Serviço</span>
     </label>
 
-    <!-- Armário na Cozinha -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temArmarioCozinha"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-kitchen-set text-blue-600"></i>
       <span class="text-gray-700">Armário na Cozinha</span>
     </label>
 
-    <!-- Closet -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCloset"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-shirt text-blue-600"></i>
       <span class="text-gray-700">Closet</span>
     </label>
 
-    <!-- Cobertura -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCobertura"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 borderborder-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-building text-blue-600"></i>
       <span class="text-gray-700">Cobertura</span>
     </label>
 
-    <!-- Condomínio Fechado -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCondominioFechado"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-lock text-blue-600"></i>
       <span class="text-gray-700">Condomínio Fechado</span>
     </label>
 
-    <!-- Escritório -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temEscritorio"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-briefcase text-blue-600"></i>
       <span class="text-gray-700">Escritório</span>
     </label>
 
-    <!-- Armário no Quarto -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temArmarioQuarto"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-door-closed text-blue-600"></i>
       <span class="text-gray-700">Armário no Quarto</span>
     </label>
 
-    <!-- Cozinha Americana -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCozinhaAmericana"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-utensils text-blue-600"></i>
       <span class="text-gray-700">Cozinha Americana</span>
     </label>
 
-    <!-- Box Banheiro -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temBoxBanheiro"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-bath text-blue-600"></i>
       <span class="text-gray-700">Box Banheiro</span>
     </label>
 
-    <!-- Armario Projetado -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temArmarioProjetado"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-drawer text-blue-600"></i>
       <span class="text-gray-700">Armário Projetado</span>
     </label>
 
-    <!-- Corbetura -->
     <label class="flex items-center space-x-3 cursor-pointer">
       <input type="checkbox" formControlName="temCobertura"
-             class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+             class="h-5 w-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500"/>
       <i class="fa-solid fa-building text-blue-600"></i>
       <span class="text-gray-700">Cobertura</span>
     </label>
-   </div>
 
-  <!-- Imagem -->
+  </section>
+</div>
+
+<!-- Imagem -->
 <section class="border-2 border-dashed border-blue-300 p-6 rounded-lg text-center cursor-pointer">
   <i class="fas fa-cloud-upload-alt text-blue-500 text-3xl"></i>
   <p class="mt-2 text-sm text-gray-600">Arraste imagens ou escolha arquivos</p>
@@ -201,42 +206,42 @@
   <section class="space-y-2">
     <label class="block text-sm font-medium text-gray-700">Descrição</label>
     <textarea rows="4" formControlName="descricao"
-              class="w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+              class="w-full border border-gray-400 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
   </section>
 
   <!-- Endereço -->
   <section class="bg-green-50 p-6 rounded-lg space-y-4">
-    <h3 class="text-lg font-semibold text-green-800 flex items-center gap-2">
+    <h3 class="text-xl font-bold text-blue-700 flex items-center gap-2">
       <i class="fas fa-map-marker-alt"></i> Endereço do Imóvel
     </h3>
     <div class="grid grid-cols-2 gap-6">
       <div class="col-span-2">
         <label class="block text-gray-700 font-medium mb-2">CEP</label>
-        <input type="text" formControlName="cep" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="cep" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Logradouro</label>
-        <input type="text" formControlName="logradouro" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="logradouro" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Número</label>
-        <input type="text" formControlName="numero" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="numero" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Complemento</label>
-        <input type="text" formControlName="complemento" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="complemento" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Bairro</label>
-        <input type="text" formControlName="bairro" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="bairro" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Cidade</label>
-        <input type="text" formControlName="cidade" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="cidade" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
       <div>
         <label class="block text-gray-700 font-medium mb-2">Estado</label>
-        <input type="text" formControlName="estado" class="w-full border rounded-lg px-3 py-2">
+        <input type="text" formControlName="estado" class="w-full border border-gray-400 rounded-lg px-3 py-2">
       </div>
     </div>
   </section>
