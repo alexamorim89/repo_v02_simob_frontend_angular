@@ -9,21 +9,23 @@ import { Component } from '@angular/core';
 })
 export class AppCadastroImovelComponent {
 
-  preview: string | ArrayBuffer | null = null;
+  previews: string[] = [];
 
-  onFileSelected(event: Event) {
-    const file = (event.target as HTMLInputElement).files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.preview = reader.result;
-        // this.imovel.imagem = file.name;
-      };
-      reader.readAsDataURL(file);
+  onFilesSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      this.previews = [];
+      Array.from(input.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          this.previews.push(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      });
     }
   }
 
-  tipoSelecionado: string = '';
+  tipoSelecionado: string = 'pessoa_fisica';
 
   selecionarTipo(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
@@ -31,12 +33,10 @@ export class AppCadastroImovelComponent {
   }
 
   isPessoaFisica(): boolean {
-    document.getElementById('campos-fisica')?.classList.remove('hidden');
     return this.tipoSelecionado === 'pessoa_fisica';
   }
 
   isPessoaJuridica(): boolean {
-    document.getElementById('campos-juridica')?.classList.remove('hidden');
     return this.tipoSelecionado === 'pessoa_juridica';
   }
 
@@ -44,12 +44,13 @@ export class AppCadastroImovelComponent {
     if (this.isPessoaFisica()) {
       return 'mt-8 border rounded-lg p-6 bg-green-50 border-green-300';
     } else if (this.isPessoaJuridica()) {
-      return 'mt-8 border rounded-lg p-6 bg-blue-50 border-blue-300';
-    }
+      return 'mt-8 border border-gray-300 rounded-lg p-6 bg-blue-50 mb-6';    }
     return 'mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50';
   }
 
-
+  removerImagem(index: number) {
+  this.previews.splice(index, 1);
+}
 
 
 
