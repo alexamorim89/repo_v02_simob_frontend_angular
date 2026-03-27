@@ -1,4 +1,4 @@
-<div class="max-w-3/4 mx-auto bg-white shadow rounded-lg p-8 space-y-6">
+<div class="max-w-11/12 mx-auto bg-white shadow rounded-lg p-8 space-y-6">
   <h2 class="text-2xl font-bold text-gray-800">Cadastrar Imóvel</h2>
   <p class="text-gray-600">Preencha os dados abaixo para cadastrar um novo imóvel.</p>
 
@@ -10,51 +10,71 @@
   </div>
 
   <!-- Tipo -->
-  <div>
-    <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
-    <select
-            class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
-      <option value="">Selecione...</option>
-      <option value="casa">Casa</option>
-      <option value="apartamento">Apartamento</option>
-      <option value="terreno">Terreno</option>
-      <option value="comercial">Comercial</option>
-    </select>
-  </div>
+   <div class="grid grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Tipo de Imóvel</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="casa">Casa</option>
+          <option value="ap_padrao">Apartamento Padrão</option>
+          <option value="ap_garden">Apartamento Garden</option>
+          <option value="ap_mansao">Apartamento Mansão</option>
+          <option value="ap_duplex">Apartamento Duplex</option>
+          <option value="terreno">Terreno</option>
+          <option value="comercial">Comercial</option>
+          <option value="loja">Loja</option>
+          <option value="kitnet">Kitnet</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Tipo de Venda</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="venda">Venda</option>
+          <option value="aluguel">Aluguel</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Situação do Imóvel</label>
+        <select class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="">Selecione...</option>
+          <option value="novo">Novo</option>
+          <option value="semi_novo">Semi Novo</option>
+          <option value="antigo">Antigo</option>
+          <option value="em_construcao">Em Construção</option>
+        </select>
+      </div>
+   </div>
+
 
   <!-- Preço -->
   <div>
     <label class="block text-sm font-medium text-gray-700">Preço</label>
-    <input type="number"
-           class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
+    <input type="number" class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"/>
   </div>
 
   <!-- Características -->
   <div class="grid grid-cols-2 gap-4">
     <div>
       <label class="block text-sm font-medium text-gray-700">Quartos</label>
-      <input  type="number"
-             class="mt-1 block w-full border rounded-md px-3 py-2"/>
+      <input  type="number" class="mt-1 block w-full border rounded-md px-3 py-2"/>
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Banheiros</label>
-      <input  type="number"
-             class="mt-1 block w-full border rounded-md px-3 py-2"/>
+      <input  type="number" class="mt-1 block w-full border rounded-md px-3 py-2"/>
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Garagem</label>
-      <input type="number"
-             class="mt-1 block w-full border rounded-md px-3 py-2"/>
+      <input type="number" class="mt-1 block w-full border rounded-md px-3 py-2"/>
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Área (m²)</label>
-      <input type="number"
-             class="mt-1 block w-full border rounded-md px-3 py-2"/>
+      <input type="number" class="mt-1 block w-full border rounded-md px-3 py-2"/>
     </div>
   </div>
 
  <!-- Upload de imagem -->
- <div class="min-h-100 bg-blue-50 flex items-center justify-center">
+ <div class="min-h-60 bg-blue-50 flex items-center justify-center">
     <div class="max-w-3xl w-full bg-white shadow rounded-lg p-8 space-y-6">
         <label class="block text-sm font-medium text-gray-700">Imagem do Imóvel</label>
         <input type="file" (change)="onFileSelected($event)"
@@ -66,17 +86,51 @@
             <img [src]="preview" alt="Preview" class="w-full h-48 object-cover rounded-md shadow"/>
         </div>
     </div>
-  </div>
+</div>
 
-  <!-- Descrição -->
-  <div>
-    <label class="block text-sm font-medium text-gray-700">Descrição</label>
-    <textarea rows="4"
-              class="mt-1 block w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+<!-- Descrição -->
+<div>
+  <label class="block text-sm font-medium text-gray-700">Descrição</label>
+  <textarea rows="4" class="mt-1 block w-full h-60 border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+</div>
+
+<!-- Endereço -->
+<div class="mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50">
+  <h3 class="text-xl font-semibold mb-4">Endereço do Imóvel</h3>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="col-span-2">
+      <label class="block text-gray-700 font-medium mb-2">CEP</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="cep">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Logradouro</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="logradouro">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Número</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="numero">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Complemento</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="complemento">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Bairro</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="bairro">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Cidade</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="cidade">
+    </div>
+    <div>
+      <label class="block text-gray-700 font-medium mb-2">Estado</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2" formControlName="estado">
+    </div>
   </div>
+</div>
 
 <!-- Seção Proprietário -->
-<div id="secao-proprietario" class="mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50">
+<div id="secao-proprietario" [ngClass]="getSecaoClasses()" class="mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50">
   <h3 class="text-xl font-semibold mb-4">Dados do Proprietário</h3>
 
   <!-- Tipo -->
@@ -84,14 +138,14 @@
     <label class="block text-gray-700 font-medium mb-2">Tipo de Proprietário</label>
     <select class="w-full border rounded-lg px-3 py-2" (change)="selecionarTipo($event)">
       <option>Selecione...</option>
-      <option value="pessoa_fisica">Pessoa Física</option>
+      <option value="pessoa_fisica" [defaultSelected]="true">Pessoa Física</option>
       <option value="pessoa_juridica">Pessoa Jurídica</option>
     </select>
   </div>
 
   <!-- Campos Pessoa Física -->
    @if (isPessoaFisica()) {
-      <div id="campos-fisica" class="grid grid-cols-2 gap-4 hidden">
+      <div id="campos-fisica" class="grid grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 font-medium mb-2">Nome</label>
           <input type="text" class="w-full border rounded-lg px-3 py-2">
@@ -117,7 +171,7 @@
  
   <!-- Campos Pessoa Jurídica -->
    @if (isPessoaJuridica()) {
-      <div id="campos-juridica" class="grid grid-cols-2 gap-4 hidden">
+      <div id="campos-juridica" class="grid grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 font-medium mb-2">Razão Social</label>
           <input type="text" class="w-full border rounded-lg px-3 py-2">
@@ -148,27 +202,3 @@
     </button>
   </div>
 </div>
-
-
-<script>
-  function atualizarCamposProprietario(tipo) {
-    const camposFisica = document.getElementById('campos-fisica');
-    const camposJuridica = document.getElementById('campos-juridica');
-    const secao = document.getElementById('secao-proprietario');
-
-    if (tipo === 'Pessoa Física') {
-      camposFisica.classList.remove('hidden');
-      camposJuridica.classList.add('hidden');
-      secao.className = 'mt-8 border rounded-lg p-6 bg-green-50 border-green-300';
-    } else if (tipo === 'Pessoa Jurídica') {
-      camposFisica.classList.add('hidden');
-      camposJuridica.classList.remove('hidden');
-      secao.className = 'mt-8 border rounded-lg p-6 bg-blue-50 border-blue-300';
-    } else {
-      camposFisica.classList.add('hidden');
-      camposJuridica.classList.add('hidden');
-      secao.className = 'mt-8 border border-gray-300 rounded-lg p-6 bg-gray-50';
-    }
-  }
-</script>
-
