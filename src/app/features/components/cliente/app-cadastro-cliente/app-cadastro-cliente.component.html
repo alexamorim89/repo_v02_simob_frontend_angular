@@ -1,88 +1,96 @@
 <div class="min-h-screen bg-gray-50 p-6">
-  <div class="max-w-full mx-auto bg-white shadow rounded-lg p-6">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">Cadastro de Cliente</h2>
+  <div class="max-w-full mx-auto bg-white shadow rounded-lg p-6" [formGroup]="form">
+    <h2 class="text-2xl font-bold text-blue-600 mb-6">Cadastro de Cliente</h2>
 
     <!-- Tipo de cliente -->
     <div class="mb-6">
       <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Cliente</label>
-      <select class="w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
-        <option>Pessoa Física</option>
-        <option>Pessoa Jurídica</option>
+      <select formControlName="tipoCliente"
+              class="w-full border rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+        <option value="fisica">Pessoa Física</option>
+        <option value="juridica">Pessoa Jurídica</option>
       </select>
     </div>
 
     <!-- Pessoa Física -->
-    <div class="space-y-4 mb-8">
+    <div *ngIf="form.get('tipoCliente')?.value === 'fisica'" class="border-gray-300 rounded-lg space-y-4 mb-8 bg-green-100 p-4">
       <h3 class="text-lg font-semibold text-gray-700">Pessoa Física</h3>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Nome Completo</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">CPF</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">RG</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Data de Nascimento</label>
-        <input type="date" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Telefone</label>
-        <input type="tel" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">E-mail</label>
-        <input type="email" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Endereço</label>
-        <textarea class="mt-1 block w-full border rounded-md px-3 py-2"></textarea>
-      </div>
+      <input type="text" placeholder="Nome Completo" formControlName="nome"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="text" placeholder="CPF" formControlName="cpf"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="text" placeholder="RG" formControlName="rg"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="date" placeholder="Data de Nascimento" formControlName="dataNascimento"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="tel" placeholder="Telefone" formControlName="telefone"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="email" placeholder="E-mail" formControlName="email"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <textarea placeholder="Endereço" formControlName="endereco"
+                class="w-full border border-gray-400 rounded-md px-3 py-2"></textarea>
     </div>
 
     <!-- Pessoa Jurídica -->
-    <div class="space-y-4 mb-8">
+    <div *ngIf="form.get('tipoCliente')?.value === 'juridica'" class="border-gray-300 rounded-lg space-y-4 mb-8 border bg-gray-100 p-4">
       <h3 class="text-lg font-semibold text-gray-700">Pessoa Jurídica</h3>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Razão Social</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Nome Fantasia</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">CNPJ</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Inscrição Estadual</label>
-        <input type="text" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Telefone Comercial</label>
-        <input type="tel" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">E-mail Corporativo</label>
-        <input type="email" class="mt-1 block w-full border rounded-md px-3 py-2"/>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Endereço da Empresa</label>
-        <textarea class="mt-1 block w-full border rounded-md px-3 py-2"></textarea>
+      <input type="text" placeholder="Razão Social" formControlName="razaoSocial"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="text" placeholder="Nome Fantasia" formControlName="nomeFantasia"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="text" placeholder="CNPJ" formControlName="cnpj"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="text" placeholder="Inscrição Estadual" formControlName="inscricaoEstadual"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="tel" placeholder="Telefone Comercial" formControlName="telefoneComercial"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <input type="email" placeholder="E-mail Corporativo" formControlName="emailCorporativo"
+             class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+      <textarea placeholder="Endereço da Empresa" formControlName="enderecoEmpresa"
+                class="w-full border border-gray-400 rounded-md px-3 py-2"></textarea>
+    </div>
+
+    <!-- Endereço -->
+    <div class="mt-8 border border-gray-300 rounded-lg p-6 bg-blue-50 space-y-4 mb-6">
+      <h3 class="text-xl font-semibold text-blue-700">Endereço</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2">
+          <input type="text" placeholder="CEP" formControlName="cep"
+                 class="w-full border border-gray-400  rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Logradouro" formControlName="logradouro"
+                 class="w-full border border-gray-400  rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Número" formControlName="numero"
+                 class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Complemento" formControlName="complemento"
+                 class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Bairro" formControlName="bairro"
+                 class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Cidade" formControlName="cidade"
+                 class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+        </div>
+        <div>
+          <input type="text" placeholder="Estado" formControlName="estado"
+                 class="w-full border border-gray-400 rounded-md px-3 py-2"/>
+        </div>
       </div>
     </div>
 
     <!-- Botões -->
     <div class="flex justify-end space-x-4">
-      <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
-        Consultar
+      <button type="button" (click)="limparFormulario()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition">
+        Limpar
       </button>
-      <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
         Salvar Informações
       </button>
     </div>
